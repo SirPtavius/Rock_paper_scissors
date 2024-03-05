@@ -3,7 +3,7 @@
         let rand = Math.floor(Math.random() * 3) + 1 ;
         switch (rand){
             case 1:
-             return "rock";
+             return "rock"
             case 2:
              return "paper"
             case 3:
@@ -14,7 +14,7 @@
      function playRound(){
 
        let playerSelection = prompt("Rock, Paper or Scissors?");
-       /* Make sure that the prompt it's correct */
+       /* Makes sure that the prompt is correct */
        for (let i = 0; i = 1;){
          if (playerSelection == "paper" || playerSelection == "rock" || playerSelection == "scissors"){
             break
@@ -24,9 +24,10 @@
             playerSelection = prompt("Rock, Paper or Scissors?")
          }
        }
-        /* Check the winner*/
+       
         let computerSelection = getComputerChoise();
-        
+
+        /* Search for the winner*/
         if(playerSelection == computerSelection){
             return "Draw"
         }
@@ -73,13 +74,13 @@
          }
          console.log("Score = Player: " + player + " Computer: " + computer  )
         
+         /*Ends the cycle when one of the players reaches 3 points */ 
          if(player == 3 || computer == 3){
           break
          }
         }
 
         /* Final Winner*/
-
         if (player > computer){
           return console.log("You Won! " + player + " : " + computer)
          } 
